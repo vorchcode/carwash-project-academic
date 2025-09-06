@@ -1,0 +1,214 @@
+html, body {
+    height: 100%;            /* Pastikan penuh 1 layar */
+    margin: 0;               /* Hilangkan margin bawaan */
+    padding: 0;              /* Hilangkan padding bawaan */
+}
+
+body {
+    background: url('/img/landing/bg_page.jpg') center center / cover no-repeat fixed;
+    color: white;
+    position: relative;
+    min-height: 100vh;       /* Minimal tinggi 1 layar */
+}
+
+/* Overlay gelap di atas background */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+}
+
+/* Konten di tengah layar */
+.content {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh; /* penuh 1 layar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.25rem;
+    max-width: 600px;
+}
+
+/* Tombol */
+.btn {
+    margin-top: 20px;
+    background-color: #ebe9e6;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #a36d09;
+}
+
+/* Section Layanan */
+/* #layanan {
+    background: rgb(11, 10, 10);
+    color: black;
+    padding: 50px 20px;
+    text-align: center;
+} */
+/* Navbar */
+/* ====== Font Import ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ====== Reset & Global ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #FFD700;
+}
+
+/* ====== Tombol Navbar ====== */
+.navbar .btn {
+    background-color: #FFD700;
+    color: black;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .btn:hover {
+    background-color: #e6c200;
+}
+
+/* ====== Hero Section ====== */
+.hero {
+    height: 100vh;
+    background: url('bg.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 50px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 25px;
+}
+
+/* Tombol di Hero */
+.hero .btn-primary {
+    background-color: #FFD700;
+    border: none;
+    color: #000;
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    background-color: #e6c200;
+}
+
+/* ====== Responsif ====== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .hero {
+        padding: 0 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
+#tentang2 .judul-tentang {
+  margin-left: 100px;   /* geser dari kiri */
+  margin-top: 20px;    /* jarak dari atas */
+  margin-bottom: 20px; /* jarak dari bawah */
+  text-align: left;    /* pastikan tetap rata kiri */
+}
